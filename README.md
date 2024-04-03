@@ -22,11 +22,13 @@ Create a .env file in the project root and specify your OAuth provider keys and 
 
 
 FACEBOOK_KEY=<your-facebook-key>
+
 FACEBOOK_SECRET=<your-facebook-secret>
+
 GOOGLE_KEY=<your-google-key>
+
 GOOGLE_SECRET=<your-google-secret>
-MICROSOFTONLINE_KEY=<your-microsoftonline-key>
-MICROSOFTONLINE_SECRET=<your-microsoftonline-secret>
+
 
 
 Run the application:
