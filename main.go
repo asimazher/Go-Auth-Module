@@ -13,8 +13,6 @@ import (
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
 
-	// "github.com/markbates/goth/providers/auth0"
-
 	"github.com/markbates/goth/providers/facebook"
 
 	"github.com/markbates/goth/providers/google"
@@ -36,17 +34,8 @@ func main() {
 		google.New(os.Getenv("GOOGLE_KEY"), os.Getenv("GOOGLE_SECRET"), "http://localhost:3000/auth/google/callback"),
 		microsoftonline.New(os.Getenv("MICROSOFTONLINE_KEY"), os.Getenv("MICROSOFTONLINE_SECRET"), "http://localhost:3000/auth/microsoftonline/callback"),
 
-		// Auth0 allocates domain per customer, a domain must be provided for auth0 to work
-		// auth0.New(os.Getenv("AUTH0_KEY"), os.Getenv("AUTH0_SECRET"), "http://localhost:3000/auth/auth0/callback", os.Getenv("AUTH0_DOMAIN")),
+	
 	)
-
-	// // OpenID Connect is based on OpenID Connect Auto Discovery URL (https://openid.net/specs/openid-connect-discovery-1_0-17.html)
-	// // because the OpenID Connect provider initialize itself in the New(), it can return an error which should be handled or ignored
-	// // ignore the error for now
-	// openidConnect, _ := openidConnect.New(os.Getenv("OPENID_CONNECT_KEY"), os.Getenv("OPENID_CONNECT_SECRET"), "http://localhost:3000/auth/openid-connect/callback", os.Getenv("OPENID_CONNECT_DISCOVERY_URL"))
-	// if openidConnect != nil {
-	// 	goth.UseProviders(openidConnect)
-	// }
 
 	m := map[string]string{
 
